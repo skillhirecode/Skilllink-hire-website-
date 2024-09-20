@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .navbar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 15px;
+        background: linear-gradient(to right, blue, pink, purple);
+        height: 60px;
+        box-sizing: border-box; 
+    }
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar ul li {
+        margin-left: 24px;
+    }
+    .navbar ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        transition: color 0.3s;
+    }
+    .navbar ul li a:hover {
+        color: lightgray;
+    }
+    .navbar ul li .social-icons {
+        font-size: 20px;
+        margin-left: 16px;
+    }
+    .slider-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px; 
+    }
+    .slide img {
+        max-width: 100%;
+        height: 500px;
+    }
+    .whatsapp_button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+      }
+      .whatsapp_button img {
+        width: 50px;
+        height: auto;
+        border-radius: 50%;
+        border: 2px solid #25d366;
+        background-color: white; /* White background */
+        padding: 5px; /* Add some padding for better visual */
+        transition: transform 0.3s ease; /* Add a smooth transition effect */
+      }
+      .whatsapp_button img:hover {
+        transform: scale(1.1); /* Scale the icon on hover */
+      }
+      .footer {
+        position: relative;
+        width: 100%;
+        background: #3586ff;
+        min-height: 100px;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      .social-icon,
+      .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+      }
+      
+      .social-icon__item,
+      .menu__item {
+        list-style: none;
+      }
+      
+      .social-icon__link {
+        font-size: 2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+      }
+      .social-icon__link:hover {
+        transform: translateY(-10px);
+      }
+      
+      .menu__link {
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        text-decoration: none;
+        opacity: 0.75;
+        font-weight: 300;
+      }
+      
+      .menu__link:hover {
+        opacity: 1;
+      }
+      
+      .footer p {
+        color: #fff;
+        margin: 15px 0 10px 0;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+      
+      .wave {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url("https://i.ibb.co/wQZVxxk/wave.png");
+        background-size: 1000px 100px;
+      }
+      
+      .wave#wave1 {
+        z-index: 1000;
+        opacity: 1;
+        bottom: 0;
+        animation: animateWaves 4s linear infinite;
+      }
+      
+      .wave#wave2 {
+        z-index: 999;
+        opacity: 0.5;
+        bottom: 10px;
+        animation: animate 4s linear infinite !important;
+      }
+      
+      .wave#wave3 {
+        z-index: 1000;
+        opacity: 0.2;
+        bottom: 15px;
+        animation: animateWaves 3s linear infinite;
+      }
+      
+      .wave#wave4 {
+        z-index: 999;
+        opacity: 0.7;
+        bottom: 20px;
+        animation: animate 3s linear infinite;
+      }
+      
+      @keyframes animateWaves {
+        0% {
+          background-position-x: 1000px;
+        }
+        100% {
+          background-positon-x: 0px;
+        }
+      }
+      
+      @keyframes animate {
+        0% {
+          background-position-x: -1000px;
+        }
+        100% {
+          background-positon-x: 0px;
+        }
+      }
+        
+        
+       
+        
+       
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <ul>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="CV upload.html">Upload CV</a></li>
+            <li class="nav-item"><a class="nav-link" href="Login.html">Login</a></li>
+            <li class="nav-item"><a href="#" class="social-icons"><i class="fab fa-facebook"></i></a></li>
+            <li class="nav-item"><a href="#" class="social-icons"><i class="fab fa-instagram"></i></a></li>
+            <li class="nav-item"><a href="#" class="social-icons"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </nav>
+    <div class="slider-container">
+        <div class="slide">
+            <img src="images/skilllink hire img.jpg" alt="SKILLLINK HIRE Banner">
+        </div>
+    </div>
+    <div class="whatsapp_button">
+        <a href="https://api.whatsapp.com/send?phone=7907183269" target="_blank">
+          <img src="images/whatsapp icon.jpeg" alt="WhatsApp Icon" />
+        </a>
+      </div>
+   
+      </div>
+      <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="about.html">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="services.html">Services</a></li>
+          <li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+          <li clss="menu__item"><a class="menu__link" href="CV upload.html">Upload CV</a></li>
+    
+        </ul>
+        <p>&copy;2024  | All Rights Reserved by SKILLLINK HIRE</p>
+      </footer>
+      
+      <!-- Footer and scripts -->
+    <!--<footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify">Skilllink Hire recruits talent for overseas opportunities and provides educational guidance in India. Our services include documentation assistance, personalized training programs, and career counseling. We aim to bridge the gap between skilled professionals and global careers, while fostering educational growth in India. Our dedicated team is committed to helping individuals achieve their career and academic aspirations. </p>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html"> Services</a></li>
+                <li><a href="contact.html">Conatct </a></li>
+              </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+              <h6>Social media</h6>
+              <ul class="social-icons">
+                <li><a class="facebook" href="https://m.facebook.com/skillhireuk/"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="https://www.instagram.com/skill_hire_uk?igsh=dW52bnpleHoyeWZ3"><i class="fa fa-instagram"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+              </ul>
+            </div>
+
+          </div>
+          <hr>
+        </div>
+        <div class="container" >
+         
+            <div style="text-align: center;">
+              <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by 
+           <a href="#">Skilllink hire</a>.
+              </p>
+            </div>-->
+</body>
+</html>

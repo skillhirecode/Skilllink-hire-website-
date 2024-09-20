@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 15px;
+            background: linear-gradient(to right, blue, pink, purple);
+            height: 60px;
+            box-sizing: border-box; 
+        }
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar ul li {
+            margin-left: 24px;
+        }
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: lightgray;
+        }
+        .navbar ul li .social-icons {
+            font-size: 20px;
+            margin-left: 16px;
+        }
+       
+        
+        .upload-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .button-group{
+            display:flex;
+            justify-content-space-between;
+        }
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        .footer {
+            position: relative;
+            width: 100%;
+            background: #3586ff;
+            min-height: 100px;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          }
+          
+          .social-icon,
+          .menu {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            flex-wrap: wrap;
+          }
+          
+          .social-icon__item,
+          .menu__item {
+            list-style: none;
+          }
+          
+          .social-icon__link {
+            font-size: 2rem;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+          }
+          .social-icon__link:hover {
+            transform: translateY(-10px);
+          }
+          
+          .menu__link {
+            font-size: 1.2rem;
+            color: #fff;
+            margin: 0 10px;
+            display: inline-block;
+            transition: 0.5s;
+            text-decoration: none;
+            opacity: 0.75;
+            font-weight: 300;
+          }
+          
+          .menu__link:hover {
+            opacity: 1;
+          }
+          
+          .footer p {
+            color: #fff;
+            margin: 15px 0 10px 0;
+            font-size: 1rem;
+            font-weight: 300;
+          }
+          
+          .wave {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url("https://i.ibb.co/wQZVxxk/wave.png");
+            background-size: 1000px 100px;
+          }
+          
+          .wave#wave1 {
+            z-index: 1000;
+            opacity: 1;
+            bottom: 0;
+            animation: animateWaves 4s linear infinite;
+          }
+          
+          .wave#wave2 {
+            z-index: 999;
+            opacity: 0.5;
+            bottom: 10px;
+            animation: animate 4s linear infinite !important;
+          }
+          
+          .wave#wave3 {
+            z-index: 1000;
+            opacity: 0.2;
+            bottom: 15px;
+            animation: animateWaves 3s linear infinite;
+          }
+          
+          .wave#wave4 {
+            z-index: 999;
+            opacity: 0.7;
+            bottom: 20px;
+            animation: animate 3s linear infinite;
+          }
+          
+          @keyframes animateWaves {
+            0% 
+              background-position-x: 1000px;
+            }
+            100% {
+              background-positon-x: 0px;
+            }
+          }
+          
+          @keyframes animate {
+            0% {
+              background-position-x: -1000px;
+            }
+            100% {
+              background-positon-x: 0px;
+            }
+          }
+          
+          
+
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a href="#" class="social-icons"><i class="fab fa-facebook"></i></a></li>
+            <li class="nav-item"><a href="#" class="social-icons"><i class="fab fa-instagram"></i></a></li>
+            <li class="nav-item"><a href="#" class="social-icons"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </nav>
+    <div class="upload-container">
+        <h1>Create Your Europass CV</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+           
+            
+            <div class="form-group">
+                <label for="Eurolink">Europass</label>
+                <a href="https://europa.eu/europass/eportfolio/screen/cv-editor?lang=en" target="_blank"> Click</a>
+            <div class="button-group">
+               <!-- <button type="Upload"> Upload</button>-->
+                
+                
+            </div>
+            
+            
+            
+        </form>
+    </div>
+    <body>
+      <h1>Upload Your CV</h1>
+      <form id="uploadForm" enctype="multipart/form-data">
+          <label for="cv">Choose CV:</label>
+          <input type="file" id="cv" name="cv" required>
+          <button type="submit">Upload</button>
+      </form>
+      <p id="message"></p>
+        <!-- Axios CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  
+    <script>
+      document.getElementById('uploadForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          
+          const form = event.target;
+          const formData = new FormData();
+            // Get form values
+            const fullname = document.getElementById('fullname').value;
+            const email = document.getElementById('email').value;
+            const cv = document.getElementById('cv').files[0];
+
+             // Append form values to FormData object
+             formData.append('fullname', fullname);
+             formData.append('email', email);
+             formData.append('cv', cv);
+ 
+
+          console.log(formData)
+          // Use Axios for POST request
+          axios.post('https://api.skilllinkhire.com/api/auth/Cvupload', formData)
+              .then(function (response) {
+                  document.getElementById('message').textContent = 'Uploaded successfully';
+                  alert("Uploaded successfully");
+              })
+              .catch(function (error) {
+                  document.getElementById('message').textContent = 'Upload failed';
+                  alert("Upload failed: " + error.message);
+              });
+      });
+  </script>
+    
+    <!--<script>
+        function redirectToEuropass(){
+            windows.location.href="https://europa.eu/europass/eportfolio/screen/cv-editor?lang=en";
+
+        }
+    </script>-->
+</body>
+</html>

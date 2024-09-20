@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between; /* Adjust for mobile */
+        align-items: center;
+        padding: 10px; /* Reduce padding for mobile */
+        background: linear-gradient(to right, blue, pink, purple);
+        height: 60px;
+        box-sizing: border-box;
+    }
+    .navbar ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar ul li {
+        margin-left: 16px; /* Reduce margin for mobile */
+    }
+    .navbar ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px; /* Reduce font size for mobile */
+        transition: color 0.3s;
+    }
+    .navbar ul li a:hover {
+        color: lightgray;
+    }
+    .navbar ul li .social-icons {
+        font-size: 18px; /* Adjust font size for mobile */
+        margin-left: 12px; /* Reduce margin for mobile */
+    }
+    
+    /* Service Section Styles */
+    .our-service-sass .inner-wrapper:after {
+        content: url(../images/shape/shape-14.svg);
+        position: absolute;
+        bottom: -165px;
+        right: -165px;
+        z-index: -1;
+    }
+    .our-service-sass .service-block {
+        background: #fff;
+        border: 1px solid #eff7ff;
+        border-radius: 5px;
+        overflow: hidden;
+        position: relative;
+        z-index: 5;
+        padding: 120px 20px 20px 20px; /* Adjust padding for mobile */
+        box-shadow: 0px 2px 10px 0px rgba(12, 0, 46, 0.06);
+        margin-top: 30px; /* Reduce margin for mobile */
+    }
+    .our-service-sass .service-block .icon-s {
+        font-size: 50px; /* Adjust icon size for mobile */
+        left: 20px; /* Adjust position for mobile */
+        top: 40px; /* Adjust position for mobile */
+    }
+    .our-service-sass .service-block .title a {
+        font-size: 18px; /* Adjust title font size for mobile */
+        line-height: 28px;
+        color: #253d5f;
+        margin-bottom: 20px; /* Reduce margin for mobile */
+    }
+    .our-service-sass .service-block p {
+        color: #737f92;
+        padding-bottom: 15px; /* Reduce padding for mobile */
+    }
+    
+    /* Media Query for Mobile View */
+    @media (max-width: 768px) {
+        .navbar ul {
+            flex-direction: column; /* Stack navigation links vertically */
+            align-items: center;
+        }
+        .navbar ul li {
+            margin-left: 0;
+            margin-top: 10px; /* Add margin for vertical spacing */
+        }
+        .navbar {
+            justify-content: center; /* Center items for mobile */
+            padding: 5px; /* Reduce padding for mobile */
+        }
+        .our-service-sass .service-block {
+            padding: 100px 15px 15px 15px; /* Further adjust padding for mobile */
+        }
+        .our-service-sass .service-block .icon-s {
+            left: 10px; /* Adjust position for mobile */
+            top: 30px; /* Adjust position for mobile */
+        }
+    }
+    
+        
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="CV upload.html">Upload CV</a></li>
+            <li class="nav-item"><a href="#" class="social-icons"><i class="fab fa-facebook"></i></a></li>
+            <li class="nav-item"><a href="#" class="social-icons"><i class="fab fa-instagram"></i></a></li>
+            <li class="nav-item"><a href="#" class="social-icons"><i class="fab fa-linkedin"></i></a></li>
+            
+        </ul>
+    </nav>
+    
+    <div class="our-service-sass hide-pr show-pr">
+        <div class="container">
+            <div class="theme-title-one text-center">
+                <div class="icon-box hide-pr">
+                    <img src="http://html.creativegigs.net/rogan/rogan-c/html/images/shape/bg-shape1.svg" alt="" class="bg-shape">
+                    <img src="http://html.creativegigs.net/rogan/rogan-c/html/images/icon/icon23.svg" alt="" class="icon">
+                </div>
+                <h2 class="main-title">Our Services </h2>
+            </div> <!-- /.theme-title-one -->
+            
+            <div class="inner-wrapper">
+                <div class="row">
+                    <div class="col-lg-4 single-block aos-init aos-animate" data-aos="fade-up">
+                        <div class="service-block">
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <div class="hover-content"></div>
+                            <i class="flaticon-web user"></i>
+                            <h5 class="title"><a href="#">RECRUITING  </a></h5>
+                            <p></p>
+                           <!-- <a class="detail-button"><i class="icon-img"><img src="https://cdn-icons-gif.flaticon.com/6172/6172532.gif" width="100%"></i></a>-->
+                        </div> <!-- /.service-block -->
+                    </div> <!-- /.single-block -->
+                    <div class="col-lg-4 single-block aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-block">
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <div class="hover-content"></div>
+                            <i class="flaticon-value icon-s"></i>
+                            <h5 class="title"><a href="#">DOMESTIC STUDY</a></h5>
+                            <p>
+
+
+
+
+
+
+                            </p>
+                           <!-- <a href="#" class="detail-button"><i class="icon-img"><img src="https://cdn-icons-gif.flaticon.com/6172/6172518.gif"  width="100%"></i></a>-->
+                        </div> <!-- /.service-block -->
+                    </div> <!-- /.single-block -->
+                    <div class="col-lg-4 single-block aos-init aos-animate" data-aos="fade-up" data-aos-delay="500">
+                        <div class="service-block">
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <span class="snow-dot"></span>
+                            <div class="hover-content"></div>
+                            <i class="flaticon-login icon-s"></i>
+                            <h5 class="title"><a href="#">DOCUMENTATION</a></h5>
+                            <p>
+
+
+
+
+
+
+                                </p>
+                                
+                           <!-- <a href="#" class="detail-button"><i class="icon-img">
+            <img src="https://cdn-icons-gif.flaticon.com/6172/6172512.gif" width="100%">
+            </i></a>-->
+                        </div> <!-- /.service-block -->
+                    </div> <!-- /.single-block -->
+                </div> <!-- /.row -->
+<!-- next row -->
+<div class="row">
+    <div class="col-lg-4 single-block aos-init aos-animate" data-aos="fade-up">
+        <div class="service-block">
+            <span class="snow-dot"></span>
+            <span class="snow-dot"></span>
+            <span class="snow-dot"></span>
+            <span class="snow-dot"></span>
+            <span class="snow-dot"></span>
+            <span class="snow-dot"></span>
+            <span class="snow-dot"></span>
+            <div class="hover-content"></div>
+            <i class="flaticon-web user"></i>
+            <h5 class="title"><a href="#">LANGUAGE TRAINING</a></h5>
+            <p>
+
+
+
+
+
+
+                .</p>
+           <!-- <a class="detail-button"><i class="icon-img"><img src="https://cdn-icons-gif.flaticon.com/6172/6172532.gif" width="100%"></i></a>-->
+        </div> <!-- /.service-block -->
+    </div> <!-- /.single-block -->
+   
+</div> 
+
+
+
+            </div> <!-- /.inner-wrapper -->
+        </div> <!-- /.container -->
+    </div>
+</body>
+</html>
